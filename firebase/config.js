@@ -1,4 +1,4 @@
-
+var firebase = require("firebase/app");
 const firebaseConfig = {
     apiKey: "AIzaSyBBZ4WeXoCzVO_EvjZNLOHETdpK5lsYF7E",
     authDomain: "oyster-kode-attendence.firebaseapp.com",
@@ -9,5 +9,6 @@ const firebaseConfig = {
     measurementId: "G-2PM01W0D03"
   };
 
+ firebase.initializeApp(firebaseConfig) 
 
 module.exports={firebaseConfig};
