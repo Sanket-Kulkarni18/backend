@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login- Online Attendance Management System</title>
+
+    <!--bootstrap link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--custom styles-->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <div class="row no-gutters d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="left-side">
+                <img src="/images/Oyster Kode New Logo.png" class="logo" alt="logo">
+                <img src="/images/login.svg" class="img-responsive log-img" alt="login-image">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="right-side d-flex justify-content-center align-items-center fixed">
+                <form>
+                    <h1 class="big-text">Login here</h1>
+                    <div class="form-group">
+                      <input type="text" class="form-control in-box" id="username"  placeholder="Username" value="">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control in-box" id="password" placeholder="Password" value="">
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                    onclick=pass_variable_and_getResult()
+                    >Login</button>
+                    <br><br>
+                    <a href="#" class="forpass" onclick="forgetPassword()"> Forgot Your Password?</a>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/loginVar.js"></script>
+</body>
+</html>

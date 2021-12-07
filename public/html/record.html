@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorde Attendance- Online Attendance Management System</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- firebase library -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!--custom styles-->
+    <link rel="stylesheet" href="../css/record.css">
+</head>
+<body onload="callStudentsONLOAD()">
+
+    <!-- responsive navbar-->
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#">
+                        <img src="../images/Oyster Kode New Logo.png" alt="logo" class="logo">
+                    </a>
+                </div>
+    
+                <div class="collapse navbar-collapse" id="micon">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a  href="/dashboard">Dashboard</a></li>
+                        <li><a id="active" href="#">Record</a></li>
+                        <li><a href="/addstudent">Add Student</a></li>
+                        <li><a href="/allstudent">All Student</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--record attendance section-->
+    <h2 class="text-center bigtext">Record Attendance</h2>
+
+    <h4 class="date" id="date"></h4>
+    <h4 class="day" id="day"></h4>
+
+    <!--table-->
+    <div class="container-sm border align-self-center" id="recordsection">
+        <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Students Name</th>
+                <th>Attendance Status</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody">
+              <!-- <tr>
+                <td>1</td>
+                <td>Rutuja Sanjay Jadhav</td>
+                <td>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status1">&nbsp;Present
+                    </label>
+                  </div>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status1">&nbsp;Absent
+                    </label>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Rutuja Sanjay Jadhav</td>
+                <td>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status2">&nbsp;Present
+                    </label>
+                  </div>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status2">&nbsp;Absent
+                    </label>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Rutuja Sanjay Jadhav</td>
+                <td>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status3">&nbsp;Present
+                    </label>
+                  </div>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status3">&nbsp;Absent
+                    </label>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Rutuja Sanjay Jadhav</td>
+                <td>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status4">&nbsp;Present
+                    </label>
+                  </div>
+                  <div class="form-check-inline rad-btn">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="status4">&nbsp;Absent
+                    </label>
+                  </div>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+
+          <button type="submit" class="btn btn-primary" id="button"
+          onclick="saveAttendence()"
+          >Save Attendance</button>
+    </div>
+    <button type="submit" class="btn btn-success">Download Attendance</button>
+    
+    <script src="../javascript/loginVar.js"></script>
+   
+</body>
+</html>

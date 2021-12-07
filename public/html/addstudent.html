@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-student-page - Online Attendance Management System</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- firebase library -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!--font awesome icons link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--custom styles-->
+    <link rel="stylesheet" href="../css/addstudent.css">
+</head>
+<body>
+
+    <!-- responsive navbar-->
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#">
+                        <img src="../images/Oyster Kode New Logo.png" alt="logo" class="logo">
+                    </a>
+                </div>
+    
+                <div class="collapse navbar-collapse" id="micon">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/record">Record</a></li>
+                        <li><a id="active" href="#">Add Student</a></li>
+                        <li><a href="/allstudent">All Student</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- /*****************add Student**********************/ -->
+
+    <h2 class="text-center bigtext">Add Student</h2>
+
+    <a href="/allstudent" class="add-link ">
+        <i class="fas fa-angle-left"></i>
+        <i class="fas fa-angle-left"></i>
+        All students</a>
+
+
+    <div class="container-sm border align-self-center" id="addsection">
+
+            <form action="#">
+                <div class="form-group" style="width: 95%;">
+                <label for="sname">Students Name:</label>
+                <input type="text" class="form-control" id="sname" placeholder="Student Name" name="sname" value="" required>
+                </div> <br>
+
+                <div class="form-group" style="width: 95%;">
+                <label for="rollno">Roll Number:</label>
+                <input type="number" class="form-control" id="rollno" placeholder="Roll Number" name="rollno" value="" required>
+                </div> <br>
+
+                <!-- <div class="form-group" style="width: 95%;">
+                <label for="class">Class:</label>
+                <input type="text" class="form-control" id="class" placeholder="Class & Department" name="class" value="" required>
+                </div>
+                <hr> -->
+                <div class="form-group" style="width: 95%;">
+                    <label for="rollno">Gender:</label>
+                    <div class="form-check-inline gen-btn">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="gender" id="female">Female
+                        </label>
+                      </div>
+                      <div class="form-check-inline gen-btn">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="gender" id="male">Male
+                        </label>
+                      </div>
+                </div> <br>
+
+                <div class="form-group" style="width: 95%;">
+                <label for="class">Class:</label>
+                <input type="text" class="form-control" id="class" placeholder="Class & Department" name="class" list="Departments" value="" required>
+                    <datalist id="Departments">
+                    <option value="SY CSE">
+                    <option value="SY CSIT">
+                    <option value="SY ENTC">
+                    <option value="SY MECH">
+                    </datalist>
+                </div>
+                <hr>
+
+                <button type="submit" class="btn btn-primary" style="width: 95%;"
+                onclick="addstudent()"
+                >Submit</button>
+            </form>
+        
+    </div>
+
+    <script src="../javascript/loginVar.js"></script>
+
+</body>
+</html>

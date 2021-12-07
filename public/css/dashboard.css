@@ -1,0 +1,214 @@
+
+body{
+    background: #7857FE;
+}
+
+.header{
+    height: 10vh;
+}
+
+.navbar-style{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+    background: #7857FE;
+    text-transform: uppercase;
+    padding-top: 10px;
+    float: right;
+}
+
+.navbar-style  ul li a{
+    color: white !important;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.navbar-style  ul li a:hover{
+    text-decoration: none;
+    font-size: 18px;
+    background: transparent !important;
+}
+
+#active{
+    background: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: #7857FE !important;
+    margin-top: 8px;
+}
+
+#active:hover{
+    background: #7857FE !important;
+    color: white !important;
+    font-size: 18px;
+    border: 2px solid white;
+}
+
+.logo{
+    height: 48px;
+    padding: 2px 10px ;
+    margin-left: -250px !important;
+    margin-right: 270px;
+}
+
+.icon-bar{
+    background:white;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+
+#dashsection{
+    margin-top: 5rem;
+    background-color: #7857FE;
+    align-items: center;
+}
+
+.card{
+    background: white;
+    width: 220px;
+    height: 130px;
+    margin:20px 20px;
+    align-items: flex-start;
+    padding: 20px 30px;
+    border-radius: 20px !important;
+    text-transform: uppercase;
+    color: #7857FE;
+}
+
+.present{
+    background: greenyellow;
+}
+
+.absent{
+    background: red;
+    color: white;
+}
+
+.card h2, .card h4{
+    font-size: 25px;
+    font-weight: 650;
+}
+
+.boys img, .girls img{
+    height: 80px;
+    width: 30px;
+}
+.boys h2, .girls h2{
+    margin-top: -10px !important;
+}
+
+.boys h4, .girls h4{
+    margin-top: -20px !important;
+}
+
+form{
+    margin-bottom: 40px;
+}
+
+form label{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+
+input[type="date"]{
+    width: 300px;
+    height: 50px;
+    margin-left: 26px;
+    padding-left: 10px;
+    border-radius: 16px;
+    border: 2px solid #ece;
+}
+
+.dats{
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form button{
+    color: white;
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    font-size: 30px;
+}
+
+.dashed{
+    margin-top: 50px;
+    margin-right: 350px;
+}
+
+/*media querires*/
+@media screen and (max-width:768px){
+    .logo{
+        margin-left:8px !important;
+        margin-right: 0px !important;
+    }
+    .navbar-style{
+        float:none;
+    }
+
+    .dats{
+        width: 330px;
+    }
+
+    form{
+        margin-bottom: 18px;
+    }
+
+    form label{
+        font-size: 17px;
+        margin-left: 20px;
+    }
+
+    input[type="date"]{
+        width: 260px;
+        height: 45px;
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+
+    form button{
+        height: 50px;
+        width: 50px;
+        background-color: orange;
+        font-size: 30px;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+
+    .card{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .boys img, .girls img{
+        height: 80px;
+        width: 45px;
+    }
+}
+
+@media screen and (min-width:411px){
+    .card{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .boys img, .girls img{
+        height: 80px;
+        width: 45px;
+    }
+
+}

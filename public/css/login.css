@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.left-side , .right-side{
+    height: 50vh;
+    width: 100%;
+}
+
+.left-side{
+    background:#7857FE;
+}
+
+.right-side{
+    background: #eaeaea;
+}
+
+.logo{
+    height: 48px;
+    padding: 2px 10px ;
+    margin: 10px 60px !important;
+}
+
+.log-img{
+    margin: 120px 30px;
+}
+
+.big-text{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.in-box{
+    width: 400px !important;
+    height: 50px !important;
+    border-radius: 10px;
+    color: whitesmoke;
+    box-shadow:  1px 2px 2px #eaeaea;
+}
+
+::placeholder{
+    font-size: 21px;
+    font-weight: 550;
+    padding-left: 20px;
+    color: #cecece !important;
+}
+
+.btn-primary{
+    width: 400px !important;
+    margin-top: 10px;
+    color: white;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #7857FE !important;
+}
+
+.forpass{
+    font-size: 20px;
+    color: black;
+    font-weight: 550;
+    margin-top: 20px;
+    padding-left: 100px;
+}
+
+.forpass:hover{
+    color: #7857FE;
+    text-decoration: none;
+}
+
+@media screen and (min-width:768px){
+    .left-side, .right-side{
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:768px){
+    .log-img{
+        margin: 50px;
+        width: 260px;
+        height: 180px;
+    }
+
+    .in-box{
+        width: 300px !important;
+        height: 50px;
+        box-shadow: 1px 2px 2px #8a8a8a;
+    }
+
+    .btn-primary{
+        width: 300px !important;
+        background: #cecece !important;
+        border: 2px solid #eaeaea;
+        color: black;
+        font-weight: 650;
+        text-transform: uppercase;
+    }
+
+    .logo{
+        height: 48px;
+        padding: 2px 10px;
+        margin:8px !important;
+    }
+
+    .big-text{
+        text-transform: uppercase;
+        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: White;
+    }
+
+    .forpass{
+        font-size: 17px;
+        color: black;
+        font-weight: 500;
+        margin-top: 15px;
+        padding-left: 40px;
+    }
+
+    .right-side{
+        background: #7857FE;
+    }
+}
